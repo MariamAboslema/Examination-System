@@ -1,0 +1,193 @@
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --border: #1f2d45;
+      --accent: #3b82f6;
+      --accent2: #6366f1;
+      --text: #f1f5f9;
+      --muted: #64748b;
+      --error: #ef4444;
+      --success: #10b981;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+
+
+
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .form-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    .form-subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .form-label {
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      background: var(--bg) !important;
+      border: 1.5px solid var(--border) !important;
+      border-radius: 10px !important;
+      color: var(--text) !important;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      padding: 12px 15px;
+    }
+
+    .form-control::placeholder {
+      color: #3a4d65;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent) !important;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.14) !important;
+      outline: none;
+    }
+
+    .form-control.is-valid {
+      border-color: var(--success) !important;
+      background-image: none !important;
+    }
+
+    .form-control.is-valid:focus {
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.14) !important;
+    }
+
+    .form-control.is-invalid {
+      border-color: var(--error) !important;
+      background-image: none !important;
+    }
+
+    .form-control.is-invalid:focus {
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.14) !important;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-wrapper .form-control {
+      padding-right: 42px;
+    }
+
+    .field-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.85rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .field-icon.show {
+      opacity: 1;
+    }
+
+    .invalid-feedback {
+      color: var(--error) !important;
+      font-size: 0.74rem;
+      display: none;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .invalid-feedback.show {
+      display: flex !important;
+    }
+
+
+    .alert-duplicate {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 9px;
+      color: var(--error);
+      font-size: 0.83rem;
+      display: none;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .alert-duplicate.show {
+      display: flex;
+    }
+
+    .alert-duplicate a {
+      color: var(--error);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .btn-register {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      padding: 13px;
+      letter-spacing: 0.4px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-register:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(59, 130, 246, 0.35);
+      color: white;
+    }
+
+    .btn-register:active {
+      transform: translateY(0);
+    }
+
+    .signin-link {
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .signin-link a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .signin-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+
+      .form-card {
+        padding: 1.5rem;
+        border-radius: 0;
+        border: none;
+        background: transparent;
+      }
+    }
