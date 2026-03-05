@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "question": "What does HTML stand for?",
+    "answers": [
+      { "text": "Hyper Text Markup Language", "correct": true },
+      { "text": "High Transfer Machine Language", "correct": false },
+      { "text": "Home Tool Markup Language", "correct": false },
+      { "text": "Hyperlinks Text Managing Language", "correct": false }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Which tag is used to create a hyperlink?",
+    "answers": [
+      { "text": "<a>", "correct": true },
+      { "text": "<link>", "correct": false },
+      { "text": "<href>", "correct": false },
+      { "text": "<hyper>", "correct": false }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Which tag is used to insert an image?",
+    "answers": [
+      { "text": "<image>", "correct": false },
+      { "text": "<picture>", "correct": false },
+      { "text": "<img>", "correct": true },
+      { "text": "<src>", "correct": false }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Which HTML element is used for the largest heading?",
+    "answers": [
+      { "text": "<h6>", "correct": false },
+      { "text": "<heading>", "correct": false },
+      { "text": "<head>", "correct": false },
+      { "text": "<h1>", "correct": true }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Where is the correct place to put JavaScript in HTML?",
+    "answers": [
+      { "text": "Inside <script> tag", "correct": true },
+      { "text": "Inside <js> tag", "correct": false },
+      { "text": "Inside <javascript> tag", "correct": false },
+      { "text": "Inside <code> tag", "correct": false }
+    ]
+  },
+
+  {
+    "id": 6,
+    "question": "Which property is used to change text color in CSS?",
+    "answers": [
+      { "text": "color", "correct": true },
+      { "text": "font-color", "correct": false },
+      { "text": "text-style", "correct": false },
+      { "text": "background-color", "correct": false }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "How do you select an element with id 'main' in CSS?",
+    "answers": [
+      { "text": ".main", "correct": false },
+      { "text": "*main", "correct": false },
+      { "text": "main", "correct": false }, 
+      { "text": "#main", "correct": true }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Which property is used to change the background color?",
+    "answers": [
+      { "text": "background-color", "correct": true },
+      { "text": "color", "correct": false },
+      { "text": "bgcolor", "correct": false },
+      { "text": "background-style", "correct": false }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Which CSS property controls the text size?",
+    "answers": [
+      { "text": "text-size", "correct": false },
+      { "text": "font-style", "correct": false },
+      { "text": "font-size", "correct": true },
+      { "text": "size", "correct": false }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Which layout system uses rows and columns?",
+    "answers": [
+      { "text": "CSS Grid", "correct": true },
+      { "text": "Float", "correct": false },
+      { "text": "Inline-block", "correct": false },
+      { "text": "Position absolute", "correct": false }
+    ]
+  },
+
+  {
+    "id": 11,
+    "question": "Which data structure uses LIFO (Last In, First Out) order?",
+    "answers": [
+      { "text": "Linked List", "correct": false },
+      { "text": "Stack", "correct": true },
+      { "text": "Tree", "correct": false },
+      { "text": "Queue", "correct": false }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Which method is used to select an element by id?",
+    "answers": [
+      { "text": "document.query()", "correct": false },
+      { "text": "document.getId()", "correct": false },
+      { "text": "document.getElementById()", "correct": true },
+      { "text": "selectById()", "correct": false }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Which symbol is used for strict equality comparison?",
+    "answers": [
+      { "text": "===", "correct": true },
+      { "text": "==", "correct": false },
+      { "text": "=", "correct": false },
+      { "text": "!=", "correct": false }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Which function is used to print something in the console?",
+    "answers": [
+      { "text": "print()", "correct": false },
+      { "text": "console.log()", "correct": true },
+      { "text": "echo()", "correct": false },
+      { "text": "log.console()", "correct": false }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Which event occurs when a user clicks on an HTML element?",
+    "answers": [
+      { "text": "onchange", "correct": false },
+      { "text": "onhover", "correct": false },
+      { "text": "onmouse", "correct": false },
+      { "text": "onclick", "correct": true }
+    ]
+  }
+]
