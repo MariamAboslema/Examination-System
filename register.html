@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
-  
+
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -34,8 +34,7 @@
           <div class="col-12 col-sm-6">
             <label class="form-label" for="firstName">First Name</label>
             <div class="input-wrapper">
-              <input type="text" class="form-control" id="firstName" placeholder="Mohamed" autocomplete="given-name"
-                autocapitalize="words">
+              <input type="text" class="form-control" id="firstName" autocomplete="given-name" autocapitalize="words">
               <span class="field-icon" id="iconFN"></span>
             </div>
             <div class="invalid-feedback" id="firstNameErr">
@@ -45,8 +44,7 @@
           <div class="col-12 col-sm-6">
             <label class="form-label" for="lastName">Last Name</label>
             <div class="input-wrapper">
-              <input type="text" class="form-control" id="lastName" placeholder="Amin" autocomplete="family-name"
-                autocapitalize="words">
+              <input type="text" class="form-control" id="lastName" autocomplete="family-name" autocapitalize="words">
               <span class="field-icon" id="iconLN"></span>
             </div>
             <div class="invalid-feedback" id="lastNameErr">
@@ -59,8 +57,8 @@
         <div class="mb-3">
           <label class="form-label" for="regEmail">Email Address</label>
           <div class="input-wrapper">
-            <input type="email" class="form-control" id="regEmail" placeholder="mohamed@example.com"
-              autocomplete="email" inputmode="email" autocapitalize="none">
+            <input type="email" class="form-control" id="regEmail" placeholder="name@example.com" autocomplete="email"
+              inputmode="email" autocapitalize="none">
             <span class="field-icon" id="iconEM"></span>
           </div>
           <div class="invalid-feedback" id="emailErr">
@@ -79,33 +77,33 @@
 
 
           <div class="invalid-feedback" id="passwordErr">
-            <span>⚠</span><span>Min. 8 chars with at least one letter and one number.</span>
+            <span>⚠</span>
+            <span>Min. 8 chars with uppercase, lowercase, number and special character.</span>
           </div>
+
+
+          <div class="mb-4">
+            <label class="form-label" for="regRePassword">Confirm Password</label>
+            <div class="input-wrapper">
+              <input type="password" class="form-control" id="regRePassword" placeholder="Repeat your password"
+                autocomplete="new-password">
+              <span class="field-icon" id="iconRP"></span>
+            </div>
+            <div class="invalid-feedback" id="rePasswordErr">
+              <span>⚠</span><span>Passwords do not match.</span>
+            </div>
+          </div>
+
+
+          <button class="btn btn-register w-100 mb-3" id="registerBtn">Create Account →</button>
+          <p class="signin-link text-center mb-0">
+            Already have an account? <a href="login.html">Sign in</a>
+          </p>
+
         </div>
-
-
-        <div class="mb-4">
-          <label class="form-label" for="regRePassword">Confirm Password</label>
-          <div class="input-wrapper">
-            <input type="password" class="form-control" id="regRePassword" placeholder="Repeat your password"
-              autocomplete="new-password">
-            <span class="field-icon" id="iconRP"></span>
-          </div>
-          <div class="invalid-feedback" id="rePasswordErr">
-            <span>⚠</span><span>Passwords do not match.</span>
-          </div>
-        </div>
-
-
-        <button class="btn btn-register w-100 mb-3" id="registerBtn">Create Account →</button>
-        <p class="signin-link text-center mb-0">
-          Already have an account? <a href="login.html">Sign in</a>
-        </p>
-
       </div>
-    </div>
 
-  </div>
+    </div>
   </div>
 
   <script src="register.js"></script>
