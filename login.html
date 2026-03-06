@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamPro — Sign In</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+
+<div class="card">
+  <h2>Welcome back</h2>
+  <p class="subtitle">Sign in to access your exam dashboard</p>
+
+  <div class="alert" id="globalErr">
+    <span>⚠️</span><span>Incorrect email or password. Please try again.</span>
+  </div>
+
+  <div class="no-account-banner" id="noAccountBanner">
+    <span>ℹ️</span>
+    <span>No account found with this email. <a href="register.html">Register first?</a></span>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <div class="input-wrapper">
+      <input type="email" id="email" placeholder="name@example.com"
+             autocomplete="email" inputmode="email">
+    </div>
+    <div class="error-msg" id="emailErr"><span>⚠</span><span>Enter a valid email address.</span></div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <div class="input-wrapper">
+      <input type="password" id="password" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <div class="error-msg" id="passwordErr"><span>⚠</span><span>Password is required.</span></div>
+  </div>
+
+  <button class="btn" onclick="login()">Sign In →</button>
+  <p class="reg-link">Don't have an account? <a href="register.html">Register</a></p>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
