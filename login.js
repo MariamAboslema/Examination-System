@@ -99,7 +99,7 @@
 
     
     localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('user', JSON.stringify(matchedUser));
+    localStorage.setItem('currentUser', JSON.stringify(matchedUser));
     window.location.href = 'exam.html';
   }
 
