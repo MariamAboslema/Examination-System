@@ -89,11 +89,3 @@ const percent = correct / total;
 const circle = document.getElementById("scoreCircle");
 const circumference = 364.4;
 circle.style.strokeDashoffset = circumference - percent * circumference;
-function logout() {
-  localStorage.removeItem('loggedIn');
-  localStorage.removeItem('user');
-  localStorage.removeItem('userName');
-  localStorage.removeItem('examResult');
-  localStorage.removeItem('timesUp');
-  window.location.href = 'register.html';
-}

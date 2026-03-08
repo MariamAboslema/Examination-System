@@ -28,14 +28,11 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-#timeoutBanner {
-  font-family: var(--font-body);       
-  font-size: 30px;
-  padding-bottom: 15px;
-  display: none;
+#timeoutBanner{
+    font-size: 30px;
+    padding-bottom: 15px;
+    display: none;
 }
-
 .btn-row {
   display: flex;
   gap: 12px;
@@ -50,6 +47,15 @@ body {
 .btn-retake:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+.bg-grid {
+  position: fixed; 
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
 }
 
 .glow {
