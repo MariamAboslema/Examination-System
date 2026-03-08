@@ -4,8 +4,7 @@ if (timesUp) {
   document.getElementById("timeoutBanner").style.display = "block";
   localStorage.removeItem("timesUp");
 }
-const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
-const name = user.firstName || "Student";
+const name = localStorage.getItem("userName") || "Student";
 const correct = result.correct;
 const total = result.total;
 const wrong = result.wrong;
@@ -90,11 +89,3 @@ const percent = correct / total;
 const circle = document.getElementById("scoreCircle");
 const circumference = 364.4;
 circle.style.strokeDashoffset = circumference - percent * circumference;
-function logout() {
-  localStorage.removeItem('loggedIn');
-  localStorage.removeItem('user');
-  localStorage.removeItem('userName');
-  localStorage.removeItem('examResult');
-  localStorage.removeItem('timesUp');
-  window.location.href = 'register.html';
-}
