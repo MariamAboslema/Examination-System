@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ExamPro — Exam</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="exam.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam</title>
+  <link rel="stylesheet" href="exam.css">
 </head>
+
 <body>
-<header>
-  <div class="logo">Exam<span>Pro</span></div>
-</header>
-<div id="timerText" class="timer-text"></div>
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
-<div class="main">
-  <div class="exam-panel">
-    <div class="top-bar">
-      <div class="exam-progress-wrap">
-        <span class="exam-progress-label">Exam Progress</span>
-        <div class="exam-progress-track">
-          <div class="exam-progress-fill" id="examProgressFill" style="width:0%"></div>
+  <header>
+    <span class="logo">QUIZ<span>Time</span></span>
+  </header>
+  <div id="timerText" class="timer-text"></div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <div class="main">
+    <div class="exam-panel">
+      <div class="top-bar">
+        <div class="exam-progress-wrap">
+          <span class="exam-progress-label">Exam Progress</span>
+          <div class="exam-progress-track">
+            <div class="exam-progress-fill" id="examProgressFill" style="width:0%"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="question-card">
-      <div class="q-meta">
-        <div class="q-badge" id="qBadge">QUESTION 1 / 15</div>
-              <button class="btn-mark" id="btnMark" onclick="toggleMark()">⚑ Mark</button>
+      <div class="question-card">
+        <div class="q-meta">
+          <div class="q-badge" id="qBadge">QUESTION 1 / 15</div>
+          <button class="btn-mark" id="btnMark" onclick="toggleMark()">⚑ Mark</button>
+        </div>
+        <p class="q-text" id="qText"></p>
+        <div class="choices" id="choicesContainer"></div>
       </div>
-      <p class="q-text" id="qText"></p>
-      <div class="choices" id="choicesContainer"></div>
-    </div>
-    <div class="nav-bar">
-      <button class="btn-nav" id="btnPrev" onclick="prevQuestion()">‹ Previous</button>
-      <div class="nav-progress">
-        <span class="nav-progress-label">Progress</span>
-        <span class="nav-progress-count" id="examProgressCountBottom">0 / 15 Answered</span>
+      <div class="nav-bar">
+        <button class="btn-nav" id="btnPrev" onclick="prevQuestion()">‹ Previous</button>
+        <div class="nav-progress">
+          <span class="nav-progress-label">Progress</span>
+          <span class="nav-progress-count" id="examProgressCountBottom">0 / 15 Answered</span>
+        </div>
+        <button class="btn-nav btn-next" id="btnNext" onclick="nextQuestion()">Next ›</button>
       </div>
-      <button class="btn-nav btn-next" id="btnNext" onclick="nextQuestion()">Next ›</button>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-title">📌 Marked</div>
+      <div class="mark-list" id="markList">
+        <div class="mark-empty">No marked questions yet.</div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-label">All Questions</div>
+        <button class="btn-submit" onclick="submitExam()">Submit Exam</button>
+      </div>
     </div>
   </div>
-  <div class="sidebar" id="sidebar">
-    <div class="sidebar-title">📌 Marked</div>
-    <div class="mark-list" id="markList">
-      <div class="mark-empty">No marked questions yet.</div>
-    </div>
-    <div class="progress-section">
-      <div class="progress-label">All Questions</div>
-      <button class="btn-submit" onclick="submitExam()">Submit Exam</button>
+  <div class="modal-overlay" id="timeoutModal">
+    <div class="modal">
+      <div class="modal-buttons">
+        <button class="modal-btn confirm" onclick="submitExam()">See Results</button>
+      </div>
     </div>
   </div>
-</div>
-<div class="modal-overlay" id="timeoutModal">
-  <div class="modal">
-    <div class="modal-buttons">
-      <button class="modal-btn confirm" onclick="submitExam()">See Results</button>
-    </div>
-  </div>
-</div>
-<script src="exam.js"></script>
+  <script src="exam.js"></script>
 </body>
+
 </html>

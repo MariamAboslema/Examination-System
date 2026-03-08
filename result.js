@@ -4,8 +4,7 @@ if (timesUp) {
   document.getElementById("timeoutBanner").style.display = "block";
   localStorage.removeItem("timesUp");
 }
-const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
-const name = user.firstName || "Student";
+const name = localStorage.getItem("userName") || "Student";
 const correct = result.correct;
 const total = result.total;
 const wrong = result.wrong;
@@ -50,6 +49,20 @@ else {
   title = `You Failed ${name}`;
   subtitle = "Better luck next time.";
 }
+
+const btnRow = document.querySelector(".btn-row");
+if (grade === "Fail") {
+  const retakeBtn = document.createElement("button");
+  retakeBtn.className = "btn btn-primary";
+  retakeBtn.textContent = "Retake Exam";
+  retakeBtn.addEventListener("click", function() {
+    localStorage.removeItem("examResult");
+    localStorage.removeItem("timesUp");
+    window.location.href = "exam.html";
+  });
+  btnRow.insertBefore(retakeBtn, btnRow.firstElementChild);
+}
+
 document.getElementById("resultIcon").textContent = icon;
 const badge = document.getElementById("resultBadge");
 badge.textContent = grade;
