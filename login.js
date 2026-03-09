@@ -100,7 +100,7 @@
     
     localStorage.setItem('loggedIn', 'true');
     localStorage.setItem('currentUser', JSON.stringify(matchedUser));
-    window.location.href = 'exam.html';
+    window.location.replace('exam.html');
   }
 
   document.addEventListener('keydown', e => { if (e.key === 'Enter') login(); });

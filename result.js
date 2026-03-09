@@ -4,7 +4,7 @@ if (timesUp) {
   document.getElementById("timeoutBanner").style.display = "block";
   localStorage.removeItem("timesUp");
 }
-const name = localStorage.getItem("userName") || "Student";
+const name = JSON.parse(localStorage.getItem("currentUser")).firstName || "Student";
 const correct = result.correct;
 const total = result.total;
 const wrong = result.wrong;
@@ -94,5 +94,5 @@ circle.style.strokeDashoffset = circumference - percent * circumference;
   function logout() {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('examResult');
-    window.location.href = 'login.html';
+    window.location.href = 'register.html';
   }

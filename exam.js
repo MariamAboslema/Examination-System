@@ -151,7 +151,7 @@ function submitExam() {
   }
   let wrong = questions.length - correct;
   localStorage.setItem("examResult", JSON.stringify({ correct, wrong, total: questions.length }));
-  window.location.href = "result.html";
+  window.location.replace("result.html");
 }
 
 loadQuestions();
