@@ -1,3 +1,5 @@
+
+
 const result = JSON.parse(localStorage.getItem("examResult"));
 const timesUp = localStorage.getItem("timesUp") === "true";
 if (timesUp) {
@@ -58,7 +60,7 @@ if (grade === "Fail") {
   retakeBtn.addEventListener("click", function() {
     localStorage.removeItem("examResult");
     localStorage.removeItem("timesUp");
-    window.location.href = "exam.html";
+    window.location.replace("exam.html");
   });
   btnRow.insertBefore(retakeBtn, btnRow.firstElementChild);
 }
@@ -94,5 +96,5 @@ circle.style.strokeDashoffset = circumference - percent * circumference;
   function logout() {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('examResult');
-    window.location.href = 'register.html';
+    window.location.replace('register.html');
   }

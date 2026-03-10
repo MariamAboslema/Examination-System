@@ -3,7 +3,7 @@
   'use strict';
 
   if (localStorage.getItem('loggedIn') === 'true') {
-    window.location.href = 'exam.html';
+    window.location.replace('exam.html');
   }
 
 var REGEX = {
@@ -128,7 +128,7 @@ var REGEX = {
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
     localStorage.setItem('currentUser', JSON.stringify(newUser));
-    window.location.href = 'login.html';
+    window.location.replace('login.html');
   }
 
   document.getElementById('registerBtn').addEventListener('click', register);
