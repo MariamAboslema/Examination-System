@@ -91,7 +91,6 @@ header {
   align-items: center;
   gap: 14px;
   background: #111827;
-  margin-top: -30px;
   border: 1px solid #1f2d45;
   border-radius: 12px;
   padding: 12px 18px;
@@ -475,17 +474,18 @@ header {
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 64px;
-    right: -280px;
-    height: calc(100vh - 64px);
-    z-index: 150;
-    transition: right 0.3s ease;
-    width: 260px;
+  .main {
+    flex-direction: column;
   }
-  .sidebar.open { right: 0; }
-  .sidebar-overlay.show { display: block; }
+
+  .sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #1f2d45;
+    height: auto;
+    position: static;
+  }
+
   .top-bar { flex-wrap: wrap; }
-  .btn-mark { width: 100%; justify-content: center; }
+  .btn-mark { width: 50%; justify-content: center; }
 }
